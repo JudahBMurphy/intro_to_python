@@ -31,8 +31,9 @@ Note: 'x' indicates name of file or directory. 'y' indicates a path.
 	git add x - Stages file for the next commit
 	git commit -m ' commit message' - Commits staged files to the repository
 	git log - Display the commit history
-	git remote add origin httpls://github.com/GITHUBUSERNAME/REPONAME.git
-	git push -u origin main
+	git remote add origin httpls://github.com/GITHUBUSERNAME/REPONAME.git - add a remote repo
+	git push -u origin main - push commits to the remote repo
+ 	git fetch - fetch commits from the remote repo
 	''')
 
 def python_menu_loop():
