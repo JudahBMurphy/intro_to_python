@@ -96,15 +96,14 @@ def collections_library():
 	print('See below for all collection types. Type the name of one to see details')
 	dict_navigation(collections_dict)
 
-	def loop_library():
-		library_dict = {
-			'while loops': 'example',
-			'for loops': 'example',
-			'comprehensions': {
-				'list comprehensions': 'example',
-				'dict comprehensions': 'example',
-			},
-		}
-
+def loop_library():
+	library_dict = {
+		'while loops': 'example',
+		'for loops': 'example',
+		'comprehensions': {
+			'list comprehensions': 'example',
+			'dict comprehensions': 'example',
+		},
+	}
 	print('See below for all collection types. Type the name of one to see details')
 	dict_navigation(library_dict)
