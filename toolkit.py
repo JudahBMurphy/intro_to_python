@@ -1,5 +1,7 @@
 # This program serves as a quick reference guide to basic commands 
-# and syntax learned so far. Intended to be accessed using Terminal
+# and syntax learned so far. Intended to be accessed using Terminal.
+
+import toolkit_python
 
 def cmd_ln_help():
 	print('''See following list of Terminal Commands:
@@ -31,7 +33,28 @@ Note: 'x' indicates name of file or directory. 'y' indicates a path.
 	git log - Display the commit history
 	''')
 
-#def python_help():
+def python_menu_loop():
+	print('''What do you need assistence with?
+Choose from list by typing in corresponding number:
+	1. Data Types
+	2. Collections
+	3. Loops
+	4. Functions and Methods
+	5. Concepts
+	6. Documentation''')
+	loop_controller = False
+	python_help_input = int(input())
+	while loop_controller != True:
+		match python_help_input:
+			case 1:
+				loop_controller = True
+				toolkit_python.data_type_library()
+			case 2:
+				loop_controller = True
+				toolkit_python.collections_library()
+			case _:
+				print('Command not recognized. Try again using specified options.')
+				python_help_input = int(input())
 
 print('''What do you need?
 Choose from list by typing in corresponding number:
@@ -44,15 +67,13 @@ main_menu_loop_control = False
 while main_menu_loop_control != True:
 	match help_input:
 		case 1:
-			print('Accessing Terminal guide:')
 			main_menu_loop_control = True
 			cmd_ln_help()
 		case 2:
-			print('Accessing Git guide:')
 			main_menu_loop_control = True
 			git_help()
 		case 3:
-			print('Accessing Python guide:')
+			python_menu_loop()
 			main_menu_loop_control = True
 		case _:
 			print('Command not recognized. Try again using specified options.')
