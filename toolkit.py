@@ -29,8 +29,10 @@ Note: 'x' indicates name of file or directory. 'y' indicates a path.
 	git init - Creates git repository in current directory. 
 	git status - Display status of files in git repository
 	git add x - Stages file for the next commit
-	git commit - Commits staged files to the repository
+	git commit -m ' commit message' - Commits staged files to the repository
 	git log - Display the commit history
+	git remote add origin httpls://github.com/GITHUBUSERNAME/REPONAME.git
+	git push -u origin main
 	''')
 
 def python_menu_loop():
