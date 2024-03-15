@@ -1,4 +1,3 @@
-
 def test_print():
 	print("Python Toolkit")
 
@@ -11,9 +10,14 @@ def dict_navigation(dictionary):
 		print(f'{indent(4)}{x}')
 	user_input = input()
 	if user_input in dictionary:
-		sub_dict = dictionary[user_input]
-		for y in sub_dict:
-			print(f'{indent(4)}{y}: {sub_dict[y]}')
+		if user_input == dict:
+			sub_dict = dictionary[user_input]
+			for y in sub_dict:
+				print(f'{indent(4)}{y}: {sub_dict[y]}')
+		else:
+			print(f'{indent(4)} {dictionary[user_input]}')
+	elif int(user_input) == 0:
+		print('Goodbye')
 	else:
 		print('Data Type does not exist')
 
@@ -101,8 +105,9 @@ def loop_library():
 		'while loops': 'example',
 		'for loops': 'example',
 		'comprehensions': {
-			'list comprehensions': 'example',
-			'dict comprehensions': 'example',
+			'list comprehensions': 'my_list = [expression for element in iterable if condition]',
+			'dict comprehensions': 'my_dict = {key:value for element in iterable if condition}',
+			'set comprehensions': 'my_set = {expression for element in iterable if condition}',
 		},
 	}
 	print('See below for all collection types. Type the name of one to see details')
